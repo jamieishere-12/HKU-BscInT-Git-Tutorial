@@ -1,37 +1,31 @@
 # HKU BscInT Git & GitHub Tutorial
 
-Welcome! Follow these steps to practice branching, committing, and pushing your code.
+Welcome! Follow these steps in **VS Code** to practice branching, committing, pushing, and pulling.
 
-## Step-by-Step Instructions
-
-1. **Clone the repository** to your laptop:
+## Part 1: Setup (First-Time Users Only)
+1. Open the terminal in VS Code (`Ctrl + ~` or top menu: **Terminal → New Terminal**).
+2. Set your Git name and email (use the same email as your GitHub account):
    ```bash
-   git clone https://github.com/kennethcptang/HKU-BscInT-Git-Tutorial.git
-   cd HKU-BscInT-Git-Tutorial
+   git config --global user.name "Your Name"
+   git config --global user.email "your-email@connect.hku.hk"
    ```
 
-2. **Create your own branch** (use your name or HKU UID):
-   ```bash
-   git checkout -b student-yourname
-   ```
+## Part 2: Clone, Branch & Edit
+1. In VS Code, click the **Source Control** icon on the left sidebar → **Clone Repository**.
+2. Paste `https://github.com` and save it to your Desktop, then click **Open**.
+3. Click **`main`** in the very bottom-left corner → **`+ Create new branch...`** → name it `student-yourname`.
+4. Open `index.html`, add a new line `<li>Your Name - Hello World!</li>` inside `<ul>`, and save (`Ctrl+S` / `Cmd+S`).
 
-3. **Make your change:**
-   - Open `index.html` in your code editor.
-   - Add a new `<li>Your Name - Hello World!</li>` line inside the `<ul>` list.
-   - Save the file.
+## Part 3: Commit, Push & Pull Request
+1. Click the **Source Control** icon on the left sidebar.
+2. Type a message (e.g., `Add my name`) in the box and click **Commit** (click **Yes** if asked to stage changes).
+3. Click **Publish Branch**:
+   - Sign into GitHub when VS Code prompts you.
+   - When VS Code asks *"Would you like to create a fork and push to it instead?"*, click **Create Fork**.
+4. Click **Create Pull Request** (in VS Code or on GitHub) to submit your work!
 
-4. **Stage and commit your work:**
-   ```bash
-   git add index.html
-   git commit -m "Add YourName to attendance list"
-   ```
-
-5. **Push your branch to GitHub:**
-   ```bash
-   git push -u origin student-yourname
-   ```
-
-6. **Open a Pull Request:**
-   - Go back to this GitHub page in your browser.
-   - Click **Compare & pull request** to submit your branch!
-
+## Part 4: Pull Everyone's Combined Work
+After the lecturer merges the Pull Requests on screen, switch back to `main` (bottom-left corner) and run this in the VS Code terminal to see everyone's names:
+```bash
+git pull https://github.com main
+```
